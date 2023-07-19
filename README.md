@@ -1,2 +1,2 @@
 # Python
-Repositório para estudo desta linguagem fantástica.
+Repositório para estudo.
