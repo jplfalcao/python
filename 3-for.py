@@ -1,90 +1,116 @@
-#!/usr/bin/env python
-# Autor: João Falcão
+# Autor: João PauLo Falcão
 # Github: https://github.com/jplfalcao
 # Data de criação: 28/10/2022
-# Data de modificação:
-# Versão: 1.0
-# Uso: python3 3-for.py
+# Data de modificação: 26/08/2023
+# Versão: 1.1
+
+
+"""
+Dicas:
+Utilize quatro espaços em branco para indentação!
+Termine uma instrução sempre com uma nova linha!
+
+Referências:
+https://peps.python.org/pep-0008/
+https://wiki.python.org.br/GuiaDeEstilo
+"""
+
 
 # ESTRUTURA DE REPETIÇÃO: for
 
-# A estrutura do código segue a PEP8.
-# https://peps.python.org/pep-0008/
+"""
+O 'for' é um loop utilizado para percorrer elementos de uma lista.
+Ele se repete uma vez, utilizando uma variável temporária, para cada 
+elemento da lista.
+A cada repetição, a variável temporária assume o valor de um elemento da lista,
+de forma sequencial.
+"""
 
-# Documentação consultada:
-# https://docs.python.org/3/reference/compound_stmts.html#the-for-statement
-
-# O padrão de nomeamento de variáveis que o python segue é chamado
-# snakecase: nome_da_variavel = 123.
-
-# ESTRUTURA DE REPETIÇÃO: for
-# O for é um tipo especial de loop feito para percorrer elementos de uma lista.
-
-# for (variável_temporária) in (lista):
-# instruções...
-
-# O for se repete uma vez para cada elemento da lista.
-# A cada repetição, a variável temporária assume o valor de um elemento
-# da lista, na ordem da lista.
-
-lista = [5, 4, 3, 2, 1]
-for elemento in lista:
-    print("Valor do elemento da lista é:", elemento)
+lista = [0, 1, 2, 3, 4, 5]
+for var_temp in lista:
+    print(f"Valor do elemento da lista é: {var_temp}")
 print()
 
-nomes_cidades = ["Recife", "Olinda", "Jaboatão dos Guararapes", "Paulista"]
-for nome in nomes_cidades:
-    print(nome)
+cidades = ["Recife", "Olinda", "Jaboatão dos Guararapes", "Paulista"]
+for var_temp in cidades:
+    print(f"{var_temp}")
 print()
 
 
-# UTILIZANDO A FUNÇÃO RANGE
+# Utilizando intervalos - range
 
-# Documentação consultada:
-# https://docs.python.org/3/library/stdtypes.html#ranges
-
-# Com 1 parâmetro, ele será interpretado como valor final (exclusivo).
-# O valor inicial será 0 e o incremento será em 1.
-for numero in range(10):  # "range" significa faixa.
-    print(numero)
-    # Este exemplo imprime os números de 0 a 9.
+"""
+A função 'range()' possibilita criar uma sequência de números (inteiros), 
+que varia de um ponto de partida até um ponto final.
+O incremento padrão é de 1 a cada iteração do comando 'for'.
+O exemplo a seguir imprime os números de 0 a 9:
+"""
+for numero in range(10):
+    print(f"número: {numero}")
 print()
 
-# Com 2 parâmetros, o primeiro será o valor inicial (inclusivo) e o
-# segundo será o final (exclusivo).
-# O incremento continuará sendo 1.
+"""
+Com dois parâmetros, o primeiro será o valor inicial (inclusivo) e o
+segundo será o final (exclusivo).
+O incremento continuará sendo 1.
+O exemplo a seguir imprime os números de 1 a 10:
+"""
 for numero in range(1, 11):
-    print(numero)
-    # Este exemplo imprime os números de 1 a 10.
+    print(f"número: {numero}")
 print()
 
-# Com 3 parâmetros, o terceiro será interpretado como incremento.
-for numero in range(1, 20, 2):
-    print(numero)
-    # Este exemplo imprime os ímpares positivos menores do que 20.
-    # Ele começa a valer 1 e salta (passo) a cada 2 até atingir ou passar 20.
+"""
+Com trẽs parâmetros, o terceiro será interpretado como incremento.
+No exemplo, será impresso os números pares menores que 20.
+Ele começa a valer 0 e salta (passo) a cada 2 até atingir ou passar 22.
+"""
+for numero in range(0, 22, 2):
+    print(f"número: {numero}")
 print()
 
-# O incremento pode ser também um decremento (incremento negativo).
+"""
+O incremento pode ser também um decremento (incremento negativo).
+O exemplo a seguir imprime os números de 1 a 10 em ordem decrescente:
+"""
 for numero in range(10, 0, -1):
-    print(numero)
-# Imprimindo os números de 1 a 10 em ordem decrescente.
+    print(f"número: {numero}")
 print()
 
 
-# UTILIZANDO UM DICIONÁRIO
+print(">>>Tabuada<<<")
+multiplicando = int(input("Qual número deseja saber a tabuada: "))
+for multplicador in range(1, 11):  # Multiplicando de 1 até 10
+    print(f"{multiplicando} X {multplicador} = {multplicador * multiplicando}")
+print()
 
-# Documentação consultada:
-# https://docs.python.org/3/library/stdtypes.html#mapping-types-dict
 
-# Os dicionários são coleções de itens e os seus elementos são armazenados
-# de forma não ordenada.
+# Utilizando dicionário - dict
+
+"""
+Um dicionário são objetos mapeados que armazena um par de chave e valor.
+Esses objetos são armazenados de forma não ordenada/sequencial.
+"""
+
+print(">>>Dicionário do Linux<<<")
 linux = {
-    "criador": "Linux Torvalds",
-    "ano": "1991/09/17",
-    "base": "UNIX",
-    "filosofia": "GNU",
-    "interpretador": "Bash",
+    "Kernel": "Linux",
+    "Criador": "Linus Torvalds",
+    "Ano": "1991/08/25",
+    "Base": "MINIX",
+    "Filosofia": "GNU",
+    "Interpretador": "Bash",
 }
-for chave in linux:
-    print(f"{chave}: {linux[chave]}")
+for var_temp in linux:
+    print(f"{var_temp}: {linux[var_temp]}")
+
+
+
+"""
+Referências:
+https://docs.python.org/3/reference/compound_stmts.html#the-for-statement
+https://docs.python.org/3/glossary.html#term-iterator
+https://docs.python.org/3/library/stdtypes.html#ranges
+https://docs.python.org/3/library/stdtypes.html#mapping-types-dict
+https://www.w3schools.com/python/python_for_loops.asp
+https://www.w3schools.com/python/python_dictionaries.asp
+"""
