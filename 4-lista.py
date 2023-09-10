@@ -1,8 +1,8 @@
 # Autor: João PauLo Falcão
 # Github: https://github.com/jplfalcao
 # Data de criação: 08/09/2023
-# Data de modificação: 
-# Versão: 1.0
+# Data de modificação: 10/09/2023
+# Versão: 1.1
 
 
 """
@@ -25,69 +25,96 @@ Elas podem ser:
   - De qualquer tipo: sem tipo de dado específico.
 """
 
-# Toda lista se inicia com um par de colchetes '[]', e o conteúdo é definido como elemento.
-lista_sortida = [1, 2.5, "Nome", True]
-berserk = ["Guts", "Griffith", "Casca"]
+# Toda lista se inicia com um par de colchetes '[]', e seu conteúdo é definido
+# como elemento.
+berserk = ['Guts', 'Griffith', 'Casca']
+lista_sortida = [1, 2.5, 'Nome', True]
 print(f"Lista: {berserk}")
+print(f"Lista sortida: {lista_sortida}")
 print(f"Tipo: {type(berserk)}")
 print(f"Tipo: {type(lista_sortida)}")
 
-# Apresenta a lista numerada.
-berserk_numerado = enumerate(berserk)
-print(f"Posição de cada elemento: {list(berserk_numerado)}")
+# Lista numerada.
+print(f"Posição de cada elemento: {list(enumerate(berserk))}")
 print(f"Escolhendo o segundo elemento: {berserk[1]}")  
 
-# Comprimento/tamanho de uma lista.
+# Comprimento/tamanho.
 print("Tamanho da lista:", len(berserk), "\n")
 
 
-# MÉTODOS DE LISTAS
+# MÉTODOS
 
-# O método '.append' adiona um elemento ao final na lista.
-berserk.append("Pippin")
+# Adiona um elemento (por vez) ao final.
+berserk.append('Pippin')
 print(f"Adicionando elemento: {berserk}")
 
-# Inserindo um elemento na lista, escolhendo a sua posição.
-berserk.insert(3, "Judeau")
-berserk.insert(4, "Rickert")
+# Inserindo um elemento, escolhendo a posição.
+berserk.insert(3, 'Judeau')
+berserk.insert(4, 'Rickert')
 print(f"Inserindo elementos na posição 4 e 5: {berserk}")
 
-# Realiza a junção de listas, adicionando (contatenando) os elementos
-# da segunda lista ao final da primeira.
-berserk_extendido = ["Corkus",	"Gaston"]
-berserk.extend(berserk_extendido)
+# Concatena os elementos da segunda lista ao final da primeira.
+# Opcionalmente pode utilizar: lista3 = lista1 + lista2
+berserk.extend(['Corkus', 'Gaston'])
 print(f"Lista extendida: {berserk}")
 
-# Cópia uma lista específica.
+# Copia uma lista específica.
 berserk_copia = berserk.copy()
-print(f"Copiando uma lista: {berserk}")
 
-# Ordena uma lista, em ordem alfabética.
+# Ordem alfabética dos elementos.
 berserk.sort()
 print(f"Lista ordenada: {berserk}")
 
-# Inverte a posição dos elementos da lista.
+# Inverte a posição dos elementos.
 berserk.reverse()
 print(f"Lista invertida: {berserk}")
 
-# Remove um elemento da lista, informando a posição específica.
+# Remove um elemento, informando a posição específica.
+# Caso não seja informado o indiçe, remove o último elemento.
 berserk.pop(6)
 print(f"Removendo o elemento da posição 7: {berserk}")
 
-# Remove um elemento da lista, informando o valor. OBS: REMOVE APENAS O PRIMEIRO ELEMENTO
-# QUE ELE ENCONTRA. CASO A LISTA POSSUA ELEMENTOS IGUAIS, NÃO SERÃO REMOVIDOS.
-berserk.remove("Griffith")  
-print(f"Removendo elemento escolhendo seu valor: {berserk}", "\n")
+# Remove um elemento, informando o valor.
+# OBS: REMOVE APENAS O PRIMEIRO ELEMENTO QUE ELE ENCONTRA.
+# CASO A LISTA POSSUA ELEMENTOS IGUAIS, NÃO SERÃO REMOVIDOS.
+berserk.remove('Griffith')  
+print(f"Removendo elemento por valor: {berserk}", "\n")
 
-# O Retorna a posição na primeira ocorrência do valor especificado.
-test_index = berserk.index('Guts')
-print(f"Posição do elemento pesquisado: {test_index}")
+# Retorna a posição do valor informado.
+print(f"Posição do elemento pesquisado: {berserk.index('Guts')}")
 
-# Conta a quantidade de vezes que um elemento aparece em uma lista.
+# Conta a quantidade de vezes que um elemento aparece.
 print(f"Número de vezes que o elemento aparece: {berserk.count('Guts')}")
 
-# Navega pela lista testando o seu valor.
-print(f"O valor informado se enconta na lista?: {'Guts' in berserk}")
+# Testa se o valor existe.
+print(f"O valor informado se enconta na lista?: {'Guts' in berserk}", "\n")
+
+# Removendo todos os elementos.
+berserk.clear()
+print(f"Removendo... {berserk}", "\n")
+
+
+# CONVERTENDO UMA LISTA EM UMA STRING
+
+lista = ['Convertendo', 'o', 'conteúdo', 'de', 'uma', 'lista']
+print(f"Lista: {lista}")
+# Colocando espaços (separador) entre os elementos, e transformando em 
+# uma string, utilizando o método '.join'.
+juntar = ' '.join(lista)
+print(f"String única: {juntar}", "\n")
+
+
+# UTILIZANDO LOOPS
+
+print("Imprimindo com for:")
+for var_temp in range(len(berserk_copia)):
+    print(f"{var_temp}: {berserk_copia[var_temp]}")
+
+contador = 0
+print("\nImprimindo com while:")
+while contador < len(berserk_copia):
+    print(f"{contador}: {berserk_copia[contador]}")
+    contador += 1
 
 
 """
@@ -95,7 +122,9 @@ Referências:
 https://docs.python.org/3/library/stdtypes.html#sequence-types-list-tuple-range
 https://docs.python.org/3/c-api/list.html?highligh#list-objects
 https://docs.python.org/3/library/functions.html?highlight=enumerate#enumerate
+https://docs.python.org/3/library/stdtypes.html?highlight=join#str.join
 https://www.w3schools.com/python/python_lists.asp
 https://www.w3schools.com/python/python_lists_methods.asp
 https://www.w3schools.com/python/ref_func_enumerate.asp
+https://www.w3schools.com/python/ref_string_join.asp
 """
