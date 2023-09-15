@@ -1,8 +1,8 @@
 # Autor: João PauLo Falcão
 # Github: https://github.com/jplfalcao
 # Data de criação: 08/09/2023
-# Data de modificação: 10/09/2023
-# Versão: 1.1
+# Data de modificação: 15/09/2023
+# Versão: 1.2
 
 
 """
@@ -23,10 +23,11 @@ As listas são usadas para armazenar coleções de itens em uma única variável
 Elas podem ser:
   - Dinâmicas: não possuindo tamanho fixo;
   - De qualquer tipo: sem tipo de dado específico.
-"""
 
-# Toda lista se inicia com um par de colchetes '[]', e seu conteúdo é definido
-# como elemento.
+Listas são mutáveis: O seu valor pode mudar constantemente.
+Toda lista se inicia com um par de colchetes '[]', e seu conteúdo é definido
+como elemento.
+"""
 berserk = ['Guts', 'Griffith', 'Casca']
 lista_sortida = [1, 2.5, 'Nome', True]
 print(f"Lista: {berserk}")
@@ -128,3 +129,4 @@ https://www.w3schools.com/python/python_lists_methods.asp
 https://www.w3schools.com/python/ref_func_enumerate.asp
 https://www.w3schools.com/python/ref_string_join.asp
 """
+

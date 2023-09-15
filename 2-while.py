@@ -1,8 +1,8 @@
 # Autor: João PauLo Falcão
 # Github: https://github.com/jplfalcao
 # Data de criação: 28/10/2022
-# Data de modificação: 25/08/2023
-# Versão: 1.1
+# Data de modificação: 15/09/2023
+# Versão: 1.2
 
 
 """
@@ -28,25 +28,26 @@ UM LOOP INFINITO.
 
 O 'while' testa repetidamente a expressão e, se for verdadeira, 
 executa o primeiro conjunto; se a expressão for falsa 
-(que pode ser a primeira vez que é testada), o conjunto da cláusula 'else', 
+(que pode ser a primeira vez que é testada), o conjunto da cláusula else, 
 se presente, é executado e o loop é encerrado.
 """
 
-import time  # Importando o módulo 'time'
+
+# Importando o módulo 'time'.
+import time
 
 inicio = 0
 fim = 10
 while inicio < fim:
-    # Contador que será incrementado até chegar ao valor da variável 'fim'
-    inicio += 1
     print(f"Número: {inicio}")
-    # O 'sleep' é um método do módulo 'time', onde foi definido o atraso de 1s
+    # O 'sleep' é um método do módulo 'time', onde foi definido o atraso de 1s.
     time.sleep(1)
     if inicio == 5:
         print("Paramos a contagem por aqui!\n")
-        # A instrução 'break' sai imediatamente do laço de repetição
+        # A instrução 'break' sai imediatamente do laço de repetição.
         break
-
+    # Contador que será incrementado até chegar ao valor da variável 'fim'.
+    inicio += 1    
 
 
 print("\n>>>Login no Sistema<<<")
@@ -57,10 +58,10 @@ while senha != "abc123":
 print("\nAcesso permitido!")
 
 
-
 """
 Referências:
 https://docs.python.org/3/reference/compound_stmts.html#while
 https://docs.python.org/3/library/time.html?highlight=time#time.sleep
 https://www.w3schools.com/python/python_while_loops.asp
 """
+
