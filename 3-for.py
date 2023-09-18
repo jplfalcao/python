@@ -1,8 +1,8 @@
 # Autor: João PauLo Falcão
 # Github: https://github.com/jplfalcao
 # Data de criação: 28/10/2022
-# Data de modificação: 26/08/2023
-# Versão: 1.1
+# Data de modificação: 18/09/2023
+# Versão: 1.2
 
 
 """
@@ -31,7 +31,7 @@ for var_temp in lista:
     print(f"Valor do elemento da lista é: {var_temp}")
 print()
 
-cidades = ["Recife", "Olinda", "Jaboatão dos Guararapes", "Paulista"]
+cidades = ['Recife', 'Olinda', 'Jaboatão dos Guararapes', 'Paulista']
 for var_temp in cidades:
     print(f"{var_temp}")
 print()
@@ -87,21 +87,31 @@ print()
 # Utilizando dicionário - dict
 
 """
-Um dicionário são objetos mapeados que armazena um par de chave e valor.
+Dicionários são representados por chaves '{}'.
+Um dicionário são objetos mapeados que armazena um par de chave/valor, separados
+por dois pontos 'chave': 'valor'.
+Tando a chave e o valor podem ser de qualuer tipo de dado.
 Esses objetos são armazenados de forma não ordenada/sequencial.
 """
 
 print(">>>Dicionário do Linux<<<")
 linux = {
-    "Kernel": "Linux",
-    "Criador": "Linus Torvalds",
-    "Ano": "1991/08/25",
-    "Base": "MINIX",
-    "Filosofia": "GNU",
-    "Interpretador": "Bash",
+    'Kernel': 'Linux',
+    'Criador': 'Linus Torvalds',
+    'Ano': '1991/08/25',
+    'Base': 'MINIX',
+    'Filosofia': 'GNU',
+    'Interpretador': 'Bash',
 }
+
 for var_temp in linux:
     print(f"{var_temp}: {linux[var_temp]}")
+
+print("\n", type(linux), "\n")
+
+# Apesar de dicionários não serem indexados, podemos consultar utilizando
+# colchetes '[]'.
+print(linux['Kernel'], linux['Interpretador'], sep=' >>> ')
 
 
 
@@ -111,6 +121,7 @@ https://docs.python.org/3/reference/compound_stmts.html#the-for-statement
 https://docs.python.org/3/glossary.html#term-iterator
 https://docs.python.org/3/library/stdtypes.html#ranges
 https://docs.python.org/3/library/stdtypes.html#mapping-types-dict
+https://docs.python.org/3/tutorial/datastructures.html#dictionaries
 https://www.w3schools.com/python/python_for_loops.asp
 https://www.w3schools.com/python/python_dictionaries.asp
 """

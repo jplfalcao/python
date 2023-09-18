@@ -1,3 +1,10 @@
+# Autor: João PauLo Falcão
+# Github: https://github.com/jplfalcao
+# Data de criação: 11/09/2023
+# Data de modificação:
+# Versão: 1.0
+
+
 # Importando a biblioteca
 import qrcode
 
@@ -20,3 +27,4 @@ image = qrc.make_image(fill_color = 'black', back_color = 'white')
 
 # Salva a imagem como um arquivo PNG
 image.save('QRCodeGithub.png')
+
