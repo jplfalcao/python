@@ -1,8 +1,8 @@
 # Autor: João PauLo Falcão
 # Github: https://github.com/jplfalcao
 # Data de criação: 28/10/2022
-# Data de modificação: 18/09/2023
-# Versão: 1.2
+# Data de modificação: 20/09/2023
+# Versão: 1.3
 
 
 """
@@ -84,44 +84,11 @@ for multplicador in range(1, 11):  # Multiplicando de 1 até 10
 print()
 
 
-# Utilizando dicionário - dict
-
-"""
-Dicionários são representados por chaves '{}'.
-Um dicionário são objetos mapeados que armazena um par de chave/valor, separados
-por dois pontos 'chave': 'valor'.
-Tando a chave e o valor podem ser de qualuer tipo de dado.
-Esses objetos são armazenados de forma não ordenada/sequencial.
-"""
-
-print(">>>Dicionário do Linux<<<")
-linux = {
-    'Kernel': 'Linux',
-    'Criador': 'Linus Torvalds',
-    'Ano': '1991/08/25',
-    'Base': 'MINIX',
-    'Filosofia': 'GNU',
-    'Interpretador': 'Bash',
-}
-
-for var_temp in linux:
-    print(f"{var_temp}: {linux[var_temp]}")
-
-print("\n", type(linux), "\n")
-
-# Apesar de dicionários não serem indexados, podemos consultar utilizando
-# colchetes '[]'.
-print(linux['Kernel'], linux['Interpretador'], sep=' >>> ')
-
-
-
 """
 Referências:
 https://docs.python.org/3/reference/compound_stmts.html#the-for-statement
 https://docs.python.org/3/glossary.html#term-iterator
 https://docs.python.org/3/library/stdtypes.html#ranges
-https://docs.python.org/3/library/stdtypes.html#mapping-types-dict
-https://docs.python.org/3/tutorial/datastructures.html#dictionaries
 https://www.w3schools.com/python/python_for_loops.asp
-https://www.w3schools.com/python/python_dictionaries.asp
+https://www.w3schools.com/python/ref_func_range.asp
 """
