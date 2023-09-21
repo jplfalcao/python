@@ -1,8 +1,8 @@
 # Autor: João PauLo Falcão
 # Github: https://github.com/jplfalcao
 # Data de criação: 20/09/2023
-# Data de modificação:
-# Versão: 1.0
+# Data de modificação: 21/09/2023
+# Versão: 1.1
 
 
 """
@@ -39,11 +39,28 @@ linux = {
 print(linux)
 print("\n", type(linux), "\n")
 
+# Acessando apenas as chaves
+for chave in linux.keys():
+    print(chave)
+    
+print("\n>>>\n")
+
+# Acessando apenas os valores
+for valor in linux.values():
+    print(valor)
+
+print("\n>>>\n")
+
+# Acessando ambos
+for ambos in linux:
+    print(f"{ambos}: {linux[ambos]}")
+
+
 """
 Apesar dos dicionários não serem indexados, podemos consultar utilizando
 colchetes '[]'.
 """
-print(linux['Kernel'], linux['Interpretador'], sep=' >>> ')
+print(f"\n{linux['Kernel']}: {linux['Interpretador']}")
 
 
 # Utilizando o método get()
@@ -65,9 +82,9 @@ print(linux)
 
 """
 Dicionários NÂO podem ter chaves repetidas.
-Isso irá sobreescrever o valor chave da existente.
+Isso irá sobreescrever o valor da chave existente.
 """
-linux['Ano'] = '2023/09/19'
+linux['Ano'] = '25/08/1991'
 print(linux, "\n")
 
 
@@ -78,6 +95,14 @@ O método fromkeys() retorna um dicionário com chaves diversas e um valor padr�
 """
 atacado = {}.fromkeys(['Acucar', 'Arroz', 'Feijao', 'Macarrao'], 5.90)
 print(atacado)
+
+
+# Os números precisam ser inteiros ou reais
+numero = {'Tres': 3, 'Seis': 6, 'Nove': 9}
+
+print(f"\nSoma: {sum(numero.values())}")
+print(f"Menor: {min(numero.values())}")
+print(f"Maior: {max(numero.values())}")
 
 
 """
