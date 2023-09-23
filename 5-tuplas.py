@@ -1,8 +1,8 @@
 # Autor: João PauLo Falcão
 # Github: https://github.com/jplfalcao
 # Data de criação: 15/09/2023
-# Data de modificação:
-# Versão: 1.0
+# Data de modificação: 23/09/2023
+# Versão: 1.1
 
 
 """
@@ -39,16 +39,16 @@ print(yh_lista)
 print(tuple(yh_lista), "\n")
 
 # Tupla errada.
-tupla_nao = ('Toguro')
-
-# Tupla correta.
-# Adicionando uma virtula.
+tupla_nao = 'Toguro'
+# Tupla correta. Adicionando uma virtula.
 tupla_sim = ('Toguro',)
 print(type(tupla_nao))
 print(type(tupla_sim), "\n")
 
-# Esse procedimento apresentará um erro do tipo: AttributeError.
-# Elementos não podem ser adicionados em uma tupla.
+"""
+O procedimento a seguir apresentará um erro do tipo: AttributeError.
+Elementos não podem ser adicionados em uma tupla.
+"""
 yuyu_hakusho.append('Sensui')
 print(yuyu_hakusho, "\n")
 
@@ -58,4 +58,3 @@ Referências:
 https://docs.python.org/3/library/stdtypes.html?highlight#tuples
 https://www.w3schools.com/python/python_tuples.asp
 """
-

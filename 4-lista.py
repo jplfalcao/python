@@ -1,8 +1,8 @@
 # Autor: João PauLo Falcão
 # Github: https://github.com/jplfalcao
 # Data de criação: 08/09/2023
-# Data de modificação: 15/09/2023
-# Versão: 1.2
+# Data de modificação: 23/09/2023
+# Versão: 1.3
 
 
 """
@@ -99,8 +99,10 @@ print(f"Removendo... {berserk}", "\n")
 
 lista = ['Convertendo', 'o', 'conteúdo', 'de', 'uma', 'lista']
 print(f"Lista: {lista}")
-# Colocando espaços (separador) entre os elementos, e transformando em 
-# uma string, utilizando o método '.join'.
+"""
+Colocando espaços (separador) entre os elementos, e transformando em 
+uma string, utilizando o método 'join()'.
+"""
 juntar = ' '.join(lista)
 print(f"String única: {juntar}", "\n")
 
@@ -129,4 +131,3 @@ https://www.w3schools.com/python/python_lists_methods.asp
 https://www.w3schools.com/python/ref_func_enumerate.asp
 https://www.w3schools.com/python/ref_string_join.asp
 """
-

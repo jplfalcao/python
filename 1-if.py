@@ -1,8 +1,8 @@
 # Autor: João PauLo Falcão
 # Github: https://github.com/jplfalcao
 # Data de criação: 28/10/2022
-# Data de modificação: 25/08/2023
-# Versão: 1.1
+# Data de modificação: 23/09/2023
+# Versão: 1.2
 
 
 """
@@ -14,7 +14,6 @@ Referências:
 https://peps.python.org/pep-0008/
 https://wiki.python.org.br/GuiaDeEstilo
 """
-
 
 # ESTRUTURA CONDICIONAL
 
@@ -33,8 +32,10 @@ media = (nota1 + nota2 + nota3 + nota4) / 4
 
 print(f"\nMédia: {media:.2f}")
 
-# Condição que será testada com o comando 'if'
-# Se for verdadeiro, o bloco de código é executado
+"""
+Condição que será testada com o comando 'if'.
+Se for verdadeiro, o bloco de código é executado.
+"""
 if media >= 7:
     print("Resultado: Aprovado! :-)\n")
 # Quando o teste do 'if' é falso, é efetuado outro teste com o comando 'elif'
@@ -43,8 +44,6 @@ elif media >= 6 and media < 7:
 # Quando nenhuma das condições é verdadeira, é executado o comando 'else'
 else:
     print("Resultado: Reprovado! :-(\n")
-
-
 
 print("\n>>>Índice de Massa Corporal<<<")
 peso = float(input("Informe seu peso: "))
@@ -62,7 +61,6 @@ elif imc >= 25.00 and imc <= 29.99:
     print("Acima do peso!\n")
 else:
     print("Obesidade!\n")
-
 
 
 """

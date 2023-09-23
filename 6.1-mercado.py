@@ -1,8 +1,8 @@
 # Autor: João PauLo Falcão
 # Github: https://github.com/jplfalcao
 # Data de criação: 22/09/2023
-# Data de modificação:
-# Versão: 1.0
+# Data de modificação: 23/09/2023
+# Versão: 1.1
 
 
 """
@@ -23,16 +23,16 @@ permitindo a pesquisa em todos os dicionários de uma vez.
 produtos = ChainMap(mercearia, frios, limpeza)
 
 """
-Utilizando o método 'lower()', a pequisa será realiza, mesmo se o utilizador 
+Utilizando o método 'lower()', a pequisa será realizada, mesmo se o utilizador 
 digitar letras minúsculas e/ou maiúsculas (case insensitive).
 """
-consulta = input("Qual produto deseja buscar: ").lower()
+consulta = input("Qual produto deseja pesquisar: ").lower()
 
 """
 Realiza o teste, utilizando o método 'get()', se o resultado de
-'consulta', no dicionário 'produtos', é diferente '!=' de None.
+'consulta', no dicionário 'produtos', não é 'is not' None.
 """
-if produtos.get(consulta) != None:
+if produtos.get(consulta) is not None:
     print(f"O valor de {consulta} é: R${produtos[consulta]:.2f}")
 else:
     print(f'O produto solicitado não consta no mercado.')
