@@ -1,8 +1,8 @@
 # Autor: João PauLo Falcão
 # Github: https://github.com/jplfalcao
 # Data de criação: 20/09/2023
-# Data de modificação: 21/09/2023
-# Versão: 1.1
+# Data de modificação: 04/10/2023
+# Versão: 1.3
 
 
 """
@@ -19,10 +19,9 @@ https://wiki.python.org.br/GuiaDeEstilo
 # ESTRUTURAS DE DADOS: dict
 
 """
-Um dicionário são objetos mapeados que armazena um par de chave/valor, separados
-por dois pontos 'chave': 'valor'.
-Dicionários são representados por chaves '{}'. Tando a chave e o valor
-podem ser de qualquer tipo de dado.
+Um dicionário são objetos mapeados que armazena um par de chave/valor, separados por dois pontos 'chave': 'valor'.
+Dicionários são representados por chaves '{}'.
+A chave e o valor podem ser de qualquer tipo de dado.
 Esses objetos são armazenados de forma não ordenada/sequencial.
 """
 
@@ -56,19 +55,15 @@ for ambos in linux:
     print(f"{ambos}: {linux[ambos]}")
 
 
-"""
-Apesar dos dicionários não serem indexados, podemos consultar utilizando
-colchetes '[]'.
-"""
+# Apesar de os dicionários não serem indexados, podemos consultar utilizando colchetes '[]'.
 print(f"\n{linux['Kernel']}: {linux['Interpretador']}")
 
 
 # Utilizando o método get()
 
 """
-O método get() retorna o valor de uma chave especificada.
-Caso o get() não encontre a chave informada, é retornado um valor do
-tipo 'None' que, em Python, é SEMPRE considerado como False.
+O método 'get()' retorna o valor de uma chave especifica. Caso não encontre a chave informada, é retornado um valor
+do tipo 'None' que, em Python, é SEMPRE considerado como False.
 """
 print(f"\nValor: {linux.get('Base')}")
 print(f"Valor: {linux.get('NaoTemChave')}\n")
@@ -80,10 +75,7 @@ linux['Mascote'] = 'Tux'
 linux.update({'Criador': 'Linus Benedict Torvalds'})
 print(linux)
 
-"""
-Dicionários NÂO podem ter chaves repetidas.
-Isso irá sobreescrever o valor da chave existente.
-"""
+# Dicionários NÂO podem ter chaves repetidas. Isso irá sobreescrever o valor da chave existente.
 linux['Ano'] = '25/08/1991'
 print(linux, "\n")
 
